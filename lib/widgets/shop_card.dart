@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stocko_tapi_mobile/screens/shoplist_form.dart';
+import 'package:stocko_tapi_mobile/screens/product_list.dart';
 
 class ShopItem {
   final String name;
@@ -31,6 +32,11 @@ class ShopCard extends StatelessWidget {
           if (item.name == "Add Product") {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ShopFormPage()));
+          } else if (item.name == "See Products") {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ProductListPage()));
           }
         },
         child: Container(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stocko_tapi_mobile/screens/menu.dart';
 import 'package:stocko_tapi_mobile/screens/shoplist_form.dart';
+import 'package:stocko_tapi_mobile/screens/product_list.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -48,13 +49,24 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.checklist),
+            title: const Text('See Products'),
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProductListPage(),
+                  ));
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.add_shopping_cart),
             title: const Text('Add Product'),
             onTap: () {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ShopFormPage(),
+                    builder: (context) => const ShopFormPage(),
                   ));
             },
           ),

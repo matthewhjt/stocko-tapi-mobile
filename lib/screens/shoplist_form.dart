@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stocko_tapi_mobile/widgets/left_drawer.dart';
+import 'package:stocko_tapi_mobile/model/product_model.dart';
 
 class ShopFormPage extends StatefulWidget {
   const ShopFormPage({super.key});
@@ -146,6 +147,14 @@ class _ShopFormPageState extends State<ShopFormPage> {
                 ),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
+                    final product = Product(
+                        name: _name,
+                        amount: _amount,
+                        price: _price,
+                        description: _description);
+
+                    Product.products.add(product);
+
                     showDialog(
                       context: context,
                       builder: (context) {
