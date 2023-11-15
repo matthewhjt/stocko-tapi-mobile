@@ -179,6 +179,16 @@ Contohnya ada pada tugas dan tutorial. Ketika kita baru masuk aplikasi, jika kit
 
 ## Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
 
+- Container: Kita dapat menambahkan padding, margin, border, dan warna latar belakang seperti properti dalam widget ini dan kita dapat menyesuaikannya sesuai kebutuhan kita1.
+
+- Row dan Column: Widget ini digunakan untuk menata sejumlah widget anak secara horizontal (Row) atau vertikal (Column). Anda dapat menentukan bagaimana widget anak harus ditempatkan dan berapa banyak ruang yang harus mereka tempati2.
+
+- ListView: Untuk menampilkan anak-anaknya satu demi satu dalam arah scroll.
+
+- Padding: Digunakan untuk memberikan jarak antara widget dan widget lainnya di sekelilingnya2.
+
+- Align: Digunakan untuk menyelaraskan widget anaknya dalam dirinya sendiri dan secara opsional mengatur ukurannya berdasarkan ukuran anaknya2.
+
 ## Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
 
 - Nama: Nama dari produk yang ingin ditambahkan
@@ -191,6 +201,8 @@ Semua input form dipasangkan validator di mana formnya wajib di isi. Khusus untu
 Keempat elemen input tersebut dipakai pada tugas ini karena sesuai dengan tugas aplikasi Django. Aplikasinya bertema tentang pengelolaan produk toko, jadi tiap produk harus memiliki nama, jumlah, harga, dan deskripsinya.
 
 ## Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+Dengan cara membagi aplikasi ke dalam beberapa layer, misalnya file menu.dart dan shoplist.dart dipindah ke folder screens. Beberapa layernya adalah layer Domain, aplikasi, infrastruktur, presentasi.
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
 
