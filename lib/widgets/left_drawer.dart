@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:stocko_tapi_mobile/screens/list_product.dart';
 import 'package:stocko_tapi_mobile/screens/menu.dart';
 import 'package:stocko_tapi_mobile/screens/shoplist_form.dart';
-import 'package:stocko_tapi_mobile/screens/product_list.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -55,7 +55,7 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ProductListPage(),
+                    builder: (context) => const ProductPage(),
                   ));
             },
           ),

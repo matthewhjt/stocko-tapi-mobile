@@ -1,4 +1,4 @@
-import 'package:stocko_tapi_mobile/model/product_model.dart';
+import 'package:stocko_tapi_mobile/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stocko_tapi_mobile/widgets/left_drawer.dart';
 

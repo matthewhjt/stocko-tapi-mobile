@@ -519,3 +519,60 @@ Dengan cara membagi aplikasi ke dalam beberapa layer, misalnya file menu.dart da
 
 7. Memindahkan file menu.dart dan shoplist_form.dart ke folder lib/screens
 8. Memindahkan file left_drawer.dart dan shop_card.dart ke folder lib/widgets
+
+# TUGAS 9
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Kita masih bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Meskipun begitu, membuat model terlebih dahulu lebih baik karena dengan adanya model, maintanibility dan readability-nya lebih tinggi jika ada modifikasi di kemudian hari.
+
+## Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter
+
+CookieRequest berfungsi mengatur cookies dari aplikasi untuk keperluan authentication, dan juga untuk mempermudah melakukan request apabila diperlukan authentication. CookieRequest perlu dibagikan ke semua komponen aplikasi Flutter karena CookieRequest diperlukan untuk mengelola autentikasi dan cookie
+
+## Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+Pertama-tama, data di-get dengan mengirimkan request ke API. Setelah itu, dengan memanfaatkan method yang dibuat di model.dart, response dari request diubah ke model yang sesuai dengan method fromJson. Terakhir, dengan widget Flutter tampilkan data yang sudah diubah ke model yang sesuai dan disimpan.
+
+## Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+Input data akun akan disimpan dan dijadikan body dari HTTP POST request ke server Django. Di server Django, akan dicoba untuk login. Jika berhasil, maka Django akan mereturn pesan status success, sementara jika tidak berhasil maka akan mereturn pesan status error. Setelah pesan berhasil diterima aplikasi Flutter, Flutter akan melakukan pushReplacement pada navigasi untuk membawa pengguna ke menu utama.
+
+## Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+Scaffold: Ini adalah widget dasar dari material design di Flutter.
+
+AppBar: Ini adalah bar di bagian atas aplikasi.
+
+Container: Ini adalah widget yang memungkinkan Anda untuk menyesuaikan child widget.
+
+Column: Ini adalah widget yang menampilkan child widget-nya dalam urutan vertikal.
+
+TextField: Ini adalah widget input teks.
+
+ElevatedButton: Ini adalah widget tombol dengan elevasi.
+
+FutureBuilder: Ini adalah widget yang berguna untuk melakukan operasi asinkron (seperti memanggil API atau mengambil data dari database) dan memperbarui UI berdasarkan hasil operasi tersebut.
+
+AlertDialog: Ini adalah dialog yang muncul di atas konten saat ini.
+
+SnackBar: Ini adalah pesan singkat yang muncul di bagian bawah layar.
+
+Navigator: Ini adalah widget yang mengelola stack widget dan memungkinkan navigasi antar halaman.
+
+Drawer: Ini adalah menu samping yang dapat ditarik keluar.
+
+ListView.builder: Jika ada data produk, maka ListView dibuat untuk menampilkan produk-produk tersebut.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step!
+
+1. Menginstall dependecies yang diperlukan
+2. Membuat halaman login dengan membuat file screens/login.dart.
+3. Membuat app baru pada website Django untuk authentication
+4. Mengganti main app yang dijalankan menjadi LoginApp
+5. Meng-copy JSON dari website Django, lalu membuat base model dengan memanfaatkan JSON tersebut.
+6. Membuat halaman daftar produk dengan InkWell
+7. Menambahkan event listener OnTap untuk membuka halaman detail produk.
+8. Membuat halaman produk detai
