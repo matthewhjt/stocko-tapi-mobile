@@ -15,8 +15,8 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   Future<List<Product>> fetchProduct() async {
     final request = context.watch<CookieRequest>();
-    final response =
-        await request.get('http://10.0.2.2:8000/get-product-json-flutter/');
+    final response = await request.get(
+        'https://matthew-hotmaraja-tugas.pbp.cs.ui.ac.id/get-product-json-flutter/');
 
     // melakukan konversi data json menjadi object Product
     List<Product> list_product = [];
